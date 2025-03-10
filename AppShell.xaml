@@ -9,23 +9,23 @@
     Title="CursValutar">
 
     <ShellContent
-        Title="Home"
+        Title="Curs valutar"
         ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
     <ShellContent
-        Title="Home"
+        Title="Convertor valutar"
         ContentTemplate="{DataTemplate views:ConvertorPage}"
         Route="ConvertorPage" />
     <ShellContent
-        Title="Home"
+        Title="Istoric curs"
         ContentTemplate="{DataTemplate views:IstoricPage}"
         Route="IstoricPage" />
     <ShellContent
-        Title="Home"
+        Title="Setari"
         ContentTemplate="{DataTemplate views:SetariPage}"
         Route="SetariPage" />
     <ShellContent
-        Title="Home"
+        Title="Despre aplicatie"
         ContentTemplate="{DataTemplate views:DesprePage}"
         Route="DesprePage" />
 
