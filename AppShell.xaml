@@ -12,5 +12,8 @@
         Title="Home"
         ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:ConvertorPage}"
 
 </Shell>
