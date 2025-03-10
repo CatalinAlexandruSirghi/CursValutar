@@ -24,5 +24,9 @@
         Title="Home"
         ContentTemplate="{DataTemplate views:SetariPage}"
         Route="SetariPage" />
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:DesprePage}"
+        Route="DesprePage" />
 
 </Shell>
