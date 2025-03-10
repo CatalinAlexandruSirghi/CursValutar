@@ -20,5 +20,9 @@
         Title="Home"
         ContentTemplate="{DataTemplate views:IstoricPage}"
         Route="IstoricPage" />
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:SetariPage}"
+        Route="SetariPage" />
 
 </Shell>
