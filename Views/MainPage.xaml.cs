@@ -1,4 +1,4 @@
-﻿namespace CursValutar
+﻿namespace CursValutar.Views
 {
     public partial class MainPage : ContentPage
     {
