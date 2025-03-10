@@ -15,5 +15,10 @@
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate views:ConvertorPage}"
+        Route="ConvertorPage" />
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:IstoricPage}"
+        Route="IstoricPage" />
 
 </Shell>
