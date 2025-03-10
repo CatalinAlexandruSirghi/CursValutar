@@ -20,6 +20,10 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e) {
+
+        }
     }
 
 }
