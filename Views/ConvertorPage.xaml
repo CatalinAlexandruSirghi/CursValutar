@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CursValutar.Views.ConvertorPage"
              Title="Convertor valutar">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*,*" Padding="16" RowSpacing="16">
+        <Label Grid.Row="0" Grid.Column="0" Text="Converteste din"/>
+        <Picker x:Name="PickerSursa" Grid.Row="0" Grid.Column="1" Title="Selecteaza valuta"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Text="Converteste in"/>
+        <Picker x:Name="PickerDestinatie" Grid.Row="1" Grid.Column="1" Title="Selecteaza valuta"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Text="Suma de convertit"/>
+        <Entry x:Name="EntrySuma" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" Text="1"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Text="Rezultatul conversiei"/>
+        <Entry x:Name="EntryRezultat" Grid.Row="3" Grid.Column="1" Text="" IsReadOnly="True"/>
+
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="Converteste" Clicked="Button_Clicked"/>
+    </Grid>
 </ContentPage>
