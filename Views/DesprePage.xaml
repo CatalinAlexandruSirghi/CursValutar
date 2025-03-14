@@ -4,6 +4,11 @@
              x:Class="CursValutar.Views.DesprePage"
              Title="Despre aplicatie">
     <VerticalStackLayout>
+        <!--
+            Label -> titlul aplicatiei Curs Valutar 1.0
+            Image -> logo-ul aplicatiei -> fisier (png) in directorul Resources/Images
+            Label -> autorul aplicatiei
+        -->
         <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
