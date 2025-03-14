@@ -8,7 +8,7 @@ public partial class ConvertorPage : ContentPage
         InitializeComponent();
         PickerDestinatie.ItemsSource = listaValute;
         PickerSursa.ItemsSource = listaValute;
-        
+        PickerSursa.SelectedIndex = 0;
     }
 
     private void Button_Clicked(object sender, EventArgs e)
