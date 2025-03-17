@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CursValutar.Views.DesprePage"
              Title="Despre aplicatie">
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="50" VerticalOptions="Center">
         <!--
             Label -> titlul aplicatiei Curs Valutar 1.0
             Image -> logo-ul aplicatiei -> fisier (png) in directorul Resources/Images
@@ -11,18 +11,19 @@
         -->
         <Label 
             Text="Curs Valutar 1.0"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" 
+            FontSize="Header"/>
 
         <Image
             Source="logo.png"
             HeightRequest="185"
-            Aspect="AspectFit"
+            Aspect="AspectFit"  
             SemanticProperties.Description="logo curs valutar" />
 
         <Label 
             Text="Autor: Catalin-Alexandru"
-            VerticalOptions="Center" 
+            VerticalOptions="End" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>
