@@ -10,7 +10,18 @@
             Label -> autorul aplicatiei
         -->
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Curs Valutar 1.0"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Image
+            Source="logo.png"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="logo curs valutar" />
+
+        <Label 
+            Text="Autor: Catalin-Alexandru"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
