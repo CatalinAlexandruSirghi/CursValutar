@@ -25,11 +25,10 @@ public partial class ConvertorPage : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        //TODO preluare valuta sursa (EUR -> 4.97 RON)
-        //Preluare valuta destinatie
-        //Preluare suma de convertit
-        //Efectuare conversie
-        //Afisare rezultat
+        var cursSursa = PickerSursa.SelectedItem as Curs;
+        var cursDestinatie = PickerDestinatie.SelectedItem as Curs;
 
+        var suma = Convert.ToDouble(EntrySuma.Text);
+        EntryRezultat.Text = ((cursSursa?.Valoare * suma) / cursDestinatie?.Valoare)?.ToString("N5");
     }
 }
