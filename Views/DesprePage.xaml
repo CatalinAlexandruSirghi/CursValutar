@@ -4,11 +4,6 @@
              x:Class="CursValutar.Views.DesprePage"
              Title="Despre aplicatie">
     <VerticalStackLayout Spacing="50" VerticalOptions="Center">
-        <!--
-            Label -> titlul aplicatiei Curs Valutar 1.0
-            Image -> logo-ul aplicatiei -> fisier (png) in directorul Resources/Images
-            Label -> autorul aplicatiei
-        -->
         <Label 
             Text="Curs Valutar 1.0"
             VerticalOptions="Start" 
