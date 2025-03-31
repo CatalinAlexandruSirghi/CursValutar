@@ -11,6 +11,12 @@ namespace CursValutar.Views
         {
             InitializeComponent();
             listaValute = CursBNRService.ObtineCurs("https://bnr.ro/nbrfxrates.xml");
+
+            if (listaValute.Count > 0)
+            {
+                BindingContext = listaValute[0];
+            }
+
             ListViewCurs.ItemsSource = listaValute;
         }
 
