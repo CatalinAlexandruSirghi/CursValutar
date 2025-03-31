@@ -6,7 +6,7 @@ public class Curs
     public int Multiplicator { get; set; } // 1 (implicit) sau 100
     public string Valuta { get; set; } // eg EUR, USD
     public double Valoare { get; set; }
-    public string ResursaDrapel { get; set; }
+    public string ResursaDrapel => $"https://flagcdn.com/w80/{Valuta.Substring(0, 2).ToLower()}.png";
     public string Data { get; set; }
 
     public Curs()
