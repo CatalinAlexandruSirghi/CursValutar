@@ -8,24 +8,29 @@
     </ContentPage.ToolbarItems>
 
 
-    <VerticalStackLayout
+    <StackLayout 
             Padding="30,0"
             Spacing="25">
 
         <Label
                 Text="Hello, World!" />
 
-        <ListView>
+        <ListView x:Name="ListViewCurs">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <!--TODO-->                        
-                        
+                        <HorizontalStackLayout Spacing="10">
+                            <Image Source="{Binding ResursaDrapel}"/>
+                            <Label Text="{Binding Multiplicator}"/>
+                            <Label Text="{Binding Valuta, StringFormat='{0} ='}" />
+                            <Label Text="{Binding Valoare, StringFormat='{0} RON'}"/>
+                        </HorizontalStackLayout>
+
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </VerticalStackLayout>
+    </StackLayout>
 
 
 </ContentPage>
