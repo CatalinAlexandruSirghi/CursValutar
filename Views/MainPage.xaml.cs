@@ -1,4 +1,5 @@
-﻿using CursValutar.Models;
+﻿using CursValutar.Data;
+using CursValutar.Models;
 using CursValutar.Services;
 
 namespace CursValutar.Views
@@ -6,12 +7,21 @@ namespace CursValutar.Views
     public partial class MainPage : ContentPage
     {
         private List<Curs> listaValute = new List<Curs>();
-
+        private CursDao cursDao = new CursDao();
         public MainPage()
         {
             InitializeComponent();
-            listaValute = CursBNRService.ObtineCurs("https://bnr.ro/nbrfxrates.xml");
 
+            //TODO adjsut date to take the fxrate right
+            listaValute = cursDao.ObtineCursDinData(DateTime.Now.ToString("yyyy-MM-dd"));
+
+            if (listaValute.Count == 0)
+            {
+                listaValute = CursBNRService.ObtineCurs("https://bnr.ro/nbrfxrates.xml");
+                cursDao.AdaugaCurs(listaValute);
+            }
+            
+            
             if (listaValute.Count > 0)
             {
                 BindingContext = listaValute[0];
