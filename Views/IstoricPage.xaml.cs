@@ -1,21 +1,25 @@
+using CursValutar.ViewModels;
 using Microcharts;
 
 namespace CursValutar.Views;
 
 public partial class IstoricPage : ContentPage
 {
-    public IstoricPage()
+    private IstoricViewModel _viewModel;
+    public IstoricPage(IstoricViewModel viewModel)
     {
         InitializeComponent();
+        _viewModel = viewModel;
+        BindingContext = _viewModel;
 
-        List<ChartEntry> chartEntries = [];
-
-        chartEntries.Add(new ChartEntry(10));
-        chartEntries.Add(new ChartEntry(20));
-        chartEntries.Add(new ChartEntry(30));
-        ChartViewValuta.Chart = new LineChart()
+        if(PickerValute.Items.Count > 0)
         {
-            Entries = chartEntries
-        };
+            PickerValute.SelectedIndex = 0;
+        }
+    }
+
+    private void PickerValute_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        _viewModel.AfiseazaGrafic();
     }
 }

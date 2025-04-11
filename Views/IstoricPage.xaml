@@ -11,7 +11,11 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Picker Grid.Column="1"></Picker>
-        <chart:ChartView x:Name="ChartViewValuta" Grid.Row="1" Grid.ColumnSpan="2"></chart:ChartView>
+        <Picker Grid.Column="1" x:Name="PickerValute"
+                ItemsSource="{Binding Valute}"
+                SelectedItem="{Binding ValutaCurenta}"
+                SelectedIndexChanged="PickerValute_SelectedIndexChanged"></Picker>
+        <chart:ChartView x:Name="ChartViewValuta" Grid.Row="1" Grid.ColumnSpan="2"
+                         Chart="{Binding ChartIstoric}"></chart:ChartView>
     </Grid>
 </ContentPage>

@@ -17,7 +17,7 @@ namespace CursValutar.Views
 
             if (listaValute.Count == 0)
             {
-                listaValute = CursBNRService.ObtineCurs("https://bnr.ro/nbrfxrates.xml");
+                listaValute = CursBNRService.ObtineCurs(Constante.URL_CURS_BNR);
                 cursDao.AdaugaCurs(listaValute);
             }
             

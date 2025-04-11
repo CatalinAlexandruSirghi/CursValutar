@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CursValutar.Data;
+using CursValutar.ViewModels;
+using CursValutar.Views;
+using Microsoft.Extensions.Logging;
 using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace CursValutar;
@@ -16,7 +19,9 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
-
+        builder.Services.AddSingleton<CursDao>();
+        builder.Services.AddSingleton<IstoricPage>();
+        builder.Services.AddScoped<IstoricViewModel>();
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

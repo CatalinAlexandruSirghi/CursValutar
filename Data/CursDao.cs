@@ -24,10 +24,25 @@ public class CursDao
     {
         return connection.Query<Curs>("SELECT * FROM Curs WHERE data = ?", data);
     }
-    
+
+    public List<Curs> ObtineCursValuta(string valuta)
+    {
+        return connection.Query<Curs>("SELECT * FROM Curs WHERE valuta = ? ORDER BY data", valuta);
+    }
+
     public List<Curs> ObtineCurs(string data)
     {
         return connection.Table<Curs>().ToList();
+    }
+
+    public List<string> ObtineValute()
+    {
+        return connection.QueryScalars<string>("SELECT DISTINCT valuta FROM Curs");
+    }
+
+    public int StergeInregistrari()
+    {
+        return connection.DeleteAll<Curs>();
     }
 
     public int AdaugaCurs(Curs curs)
